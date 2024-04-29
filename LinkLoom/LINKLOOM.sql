@@ -3,80 +3,68 @@ CREATE TABLE tblUser (
  name varchar2(30) NOT NULL
 );
 
---date수정
-drop table tblNotice;
 CREATE TABLE tblNotice (
  notice_pk number  PRIMARY KEY,
  title varchar2(50) NOT NULL,
  content clob NOT NULL,
- noticeDate date DEFAULT sysdate NOT NULL ,
+ date date DEFAULT sysdate NOT NULL ,
  notice_sort_pk number NOT NULL
 );
 
-drop table tblWithdrawalAccount;
 CREATE TABLE tblWithdrawalAccount (
- user_account_pk number PRIMARY KEY,
- withdrawal_application_regdate Date NOT NULL,
- final_withdrawal_regdate date NOT NULL
+ user_account_pk number  PRIMARY KEY,
+ withdrawal_application_date Date NOT NULL,
+ final_withdrawal_date Date NOT NULL
 );
 
-drop table tblUserAccount;
 CREATE TABLE tblUserAccount (
- user_account_pk number PRIMARY KEY,
+ user_account_pk number  PRIMARY KEY,
  user_pk number NOT NULL,
  account_status_pk number NOT NULL,
- id varchar2(100) NOT NULL unique,
- nickname varchar2(15) NOT NULL unique,
+ id varchar2(100) NOT NULL COMMENT 'unique',
+ nickname varchar2(15) NOT NULL COMMENT 'unique',
  representative_interests varchar2(30) NOT NULL,
  join_date date DEFAULT sysdate NOT NULL 
 );
 
-drop table tblNoticeSort;
 CREATE TABLE tblNoticeSort (
  notice_sort_pk number  PRIMARY KEY,
  sort_name varchar2(50) NOT NULL
 );
 
-drop table tblSnsRestration;
 CREATE TABLE tblSnsRestration (
  sns_regist_pk number  PRIMARY KEY,
  user_account_pk number NOT NULL,
  sns_code number NOT NULL,
  sns_id varchar2(100) NOT NULL,
- sns_token varchar2(256) NOT NULL,
+ sns_token varcahr2(256) NOT NULL,
  update_date Date NOT NULL
 );
 
---auth_adult 자료형 크기 수정
-drop table TblUserAuthentication;
 CREATE TABLE TblUserAuthentication (
  user_account_pk number  PRIMARY KEY,
  phone_number varchar2(15) DEFAULT '미인증' NOT NULL ,
  auth_cidi varchar2(88) DEFAULT '미인증' NOT NULL unique,
- auth_adult varchar2(10) DEFAULT '미인증' NOT NULL,
+ auth_adult varchar2(1) DEFAULT '미인증' NOT NULL,
  auth_date date DEFAULT sysdate NOT NULL 
 );
 
---date수정 guide_sort_pk
-drop table tblGuide;
 CREATE TABLE tblGuide (
  guide_pk number  PRIMARY KEY,
  title varchar2(50) NOT NULL,
  content clob NOT NULL,
- guideDate date DEFAULT sysdate NOT NULL,
+ date date DEFAULT sysdate NOT NULL,
  guide_sort_pk number NOT NULL
 );
 
-drop table tblPassword;
 CREATE TABLE tblPassword (
  user_account_pk number  PRIMARY KEY,
  password varchar2(20) NOT NULL,
  update_date date DEFAULT sysdate NOT NULL
 );
 
-
 CREATE TABLE tblGuideSort (
- guide_sort_pk number PRIMARY KEY,
+ guide_sort_pk number  PRIMARY KEY,
  sort_name varchar2(50) NOT NULL
 );
 
@@ -177,11 +165,12 @@ CREATE TABLE tblFollow (
  to_user number NOT NULL
 );
 
+// 수정
 CREATE TABLE tblTerms (
  terms_pk number PRIMARY KEY,
- terms_title varchar2 NOT NULL,
+ terms_title varchar2(100) NOT NULL,
  terms_detail clob NOT NULL,
- required varchar2(1) NOT NULL check('Y','N')
+ terms_required char(1) NOT NULL CHECK (terms_required IN ('Y', 'N'))
 );
 
 //복합키
@@ -195,10 +184,11 @@ ALTER TABLE tblHistoryAgreementTermsConditions ADD CONSTRAINT PK_HISTORYAGREEMEN
  user_account_pk,
  terms_pk
 );
-drop table tblBookmarkComment;
+
+// 수정
 CREATE TABLE tblBookmarkComment (
  regist_bookmark_pk number PRIMARY KEY,
- bookmarkComment clob NOT NULL
+ bookmarkcomment clob NOT NULL
 );
 
 //복합키
