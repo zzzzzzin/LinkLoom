@@ -1,8 +1,5 @@
-INDEX VERSION 1.4+C:\teamProject\LINKLOOM\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1116265406.index
-2369802555.index
-3575748554.index
-3149018128.index
-459969813.index
-729857786.index
-735409011.index
+INDEX VERSION 1.4+C:\class\project\toy_project\LinkLoom\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4145207149.index
+3242357648.index
+1370060712.index
+2931512525.index

@@ -1,0 +1,57 @@
+package com.link.user.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.link.user.model.UserDTO;
+import com.test.util.DBUtil;
+
+public class UserDAO {
+
+	private DBUtil db;
+	private Connection conn;
+	private Statement stat;
+	private PreparedStatement pstat;
+	private ResultSet rs;
+	
+	public UserDAO() {
+		this.conn = DBUtil.open("13.209.132.224", "linkloom", "java1234");
+	}
+
+	
+	public String getUserInfo(String id) {
+
+		try {
+			
+			String sql = "select * from tblUserAccount where id = ?";
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, id);
+			
+			rs = pstat.executeQuery();
+			
+			if (rs.next()) {
+				
+				UserDTO dto = new UserDTO();
+				
+				dto.setName(rs.getString("name"));
+				dto.set
+				
+			}
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return null;
+	}
+	
+	
+	
+	
+}

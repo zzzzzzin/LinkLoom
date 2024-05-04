@@ -1,0 +1,5 @@
+package com.link.bookmark.model;
+
+public class BookmarkDTO {
+
+}

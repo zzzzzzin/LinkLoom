@@ -1,0 +1,16 @@
+package com.link.user.model;
+
+import lombok.Data;
+
+@Data
+public class UserDTO {
+
+	private static String name;
+	private static String user_pk;
+	private static String account_status_pk;
+	private static String id;
+	private static String nickname;
+	private static String representative_interests;
+	private static String join_date;
+	
+}

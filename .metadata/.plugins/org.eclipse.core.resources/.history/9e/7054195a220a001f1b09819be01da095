@@ -1,0 +1,5 @@
+package com.link.admin.model;
+
+public class AdminDTO {
+
+}
