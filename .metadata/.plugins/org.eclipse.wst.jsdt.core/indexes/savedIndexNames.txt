@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+C:\teamProject\LINKLOOM\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-459969813.index
-729857786.index
-828855695.index
-735409011.index
-1116265406.index
-2369802555.index
-3575748554.index
