@@ -1,12 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+        <div class="side-menu">
+            <div><a href="#">NOTICE</a></div>
+            <div><a href="#">GUIDE</a></div>
+        </div>

@@ -1,0 +1,81 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>LINKLOOM</title>
+
+<%@ include file="/inc/asset.jsp" %>
+<style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .menu {
+            width: 15%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #ccc;
+        }
+        .content {
+            width: 80%;
+            padding: 10px;
+        }
+        
+        .content h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .pagination {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            padding: 20px;
+        }
+        .pagination li {
+            margin: 0 5px;
+        }
+</style>
+
+<body>
+	<!-- 비회원 전용 템플릿입니다.  -->
+	<%@ include file="/inc/header_visit.jsp" %>
+
+	<!-- 공지사항 페이지입니다. -->
+<div class="container">
+        <div class="menu">
+            <div>NOTICE</div>
+            <div>GUIDE</div>
+        </div>
+        <div class="content">
+            <h2>&lt;NOTICE&gt;</h2>
+            <ul>
+                <li>1. Lorem ipsum dolor sit amet</li>
+                <li>2. Consectetur adipiscing elit</li>
+                <li>3. Sed do eiusmod tempor incididunt</li>
+                <li>4. Ut labore et dolore magna aliqua</li>
+            </ul>
+            <ul class="pagination">
+                <li><a href="#">prev</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">next</a></li>
+            </ul>
+        </div>
+    </div>
+	
+	<%@ include file="/inc/footer.jsp" %>
+</body>
+</html>

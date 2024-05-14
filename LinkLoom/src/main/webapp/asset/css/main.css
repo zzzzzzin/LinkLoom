@@ -38,5 +38,29 @@
 	width: 240px;
 	text-align: center;
 }
+/*
+side-bar
+*/
+.side-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.side-menu {
+    width: 15%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+}
+.side-content{
+    width: 80%;
+    padding: 10px;
+}
 
+.side-content .board-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
 

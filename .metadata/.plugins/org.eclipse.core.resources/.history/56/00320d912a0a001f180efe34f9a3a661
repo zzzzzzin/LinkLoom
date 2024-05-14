@@ -1,0 +1,66 @@
+/* webapp > asset > css > main.css */
+
+#header {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 24px;
+}
+
+#list .item {
+	border: 1px solid #999;
+	width: 240px;
+	min-height: 240px;
+	margin: 5px;
+	margin-bottom: 60px;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+#list .item > div:nth-child(1) {
+	height: 150px;
+	overflow: auto;
+	padding: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+#list .item > div:nth-child(2) {
+	font-size: 14px;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+#list .item > div:nth-child(3) {
+	position: absolute;
+	bottom: -42px;
+	right: 0px;
+	width: 240px;
+	text-align: center;
+}
+/*
+side-bar
+*/
+.container.side-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.side-menu {
+    width: 15%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+}
+.content.side-content{
+    width: 80%;
+    padding: 10px;
+}
+
+.content.side-content board-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+

@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>LINKLOOM</title>
+
+<%@ include file="/inc/asset.jsp" %>
+
+<style>
+
+</style>
+</head>
+
+<body>
+	<!-- 회원 전용 템플릿입니다. -->
+	<%@ include file="/inc/header_user.jsp" %>
+
+	<!-- 회원의 Home화면 페이지입니다. -->
+ <div className="flex flex-col items-center justify-center p-4">
+      <div className="w-full max-w-xs">
+        <div className="border-b-2 p-2">
+          <div className="flex justify-between">
+            <div>Instagram Clone "Classic"</div>
+          </div>
+        </div>
+        <div className="p-2">
+          <div className="flex space-x-2 mb-4">
+            <div className="h-14 w-14 rounded-full bg-gray-300"></div>
+            <div className="h-14 w-14 rounded-full bg-gray-300"></div>
+            <div className="h-14 w-14 rounded-full bg-gray-300"></div>
+            <div className="h-14 w-14 rounded-full bg-gray-300"></div>
+            <div className="h-14 w-14 rounded-full bg-gray-300"></div>
+          </div>
+          <div className="border p-4 mb-4">
+            <div className="h-48 w-full bg-gray-200 flex justify-center items-center">
+              <div className="text-2xl">🔺</div>
+              <div className="text-4xl">⚪</div>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4 mb-4">
+            <button onClick={handleLike} className="flex items-center space-x-2">
+              <span className="text-2xl">❤️</span>
+              <span>{likes}</span>
+            </button>
+            <button onClick={() => handleComment("Nice shot!")}>
+              Comment
+            </button>
+          </div>
+          <div className="border p-4">
+            <div className="h-48 w-full bg-gray-200 flex justify-center items-center">
+              <div className="text-2xl">🔺</div>
+              <div className="text-4xl">⚪</div>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <button onClick={handleLike} className="flex items-center space-x-2">
+              <span className="text-2xl">❤️</span>
+              <span>{likes}</span>
+            </button>
+            <span>You look great!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<%@ include file="/inc/footer.jsp" %>
+	<script>
+	
+	</script>
+</body>
+</html>
