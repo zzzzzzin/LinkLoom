@@ -12,14 +12,18 @@
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
+
 .mtj.tmp/
-.metadata
+.metadata/
 bin/
+
+LinkLoom/build/
+LinkLoom/.settings/
+LinkLoom/.project
 .settings/
 .loadpath
 /Servers/
 .classpath
-.buildpath
 *.jar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
