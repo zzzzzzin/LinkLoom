@@ -1,4 +1,4 @@
-﻿CREATE TABLE tblUser (
+CREATE TABLE tblUser (
  user_pk number  PRIMARY KEY,
  name varchar2(30) NOT NULL
 );
@@ -165,11 +165,12 @@ CREATE TABLE tblFollow (
  to_user number NOT NULL
 );
 
+// 수정
 CREATE TABLE tblTerms (
  terms_pk number PRIMARY KEY,
- terms_title varchar2 NOT NULL,
+ terms_title varchar2(100) NOT NULL,
  terms_detail clob NOT NULL,
- required varchar2(1) NOT NULL check('Y','N')
+ terms_required char(1) NOT NULL CHECK (terms_required IN ('Y', 'N'))
 );
 
 //복합키
@@ -183,9 +184,11 @@ ALTER TABLE tblHistoryAgreementTermsConditions ADD CONSTRAINT PK_HISTORYAGREEMEN
  user_account_pk,
  terms_pk
 );
+
+// 수정
 CREATE TABLE tblBookmarkComment (
- regist_bookmar_pk number PRIMARY KEY,
- comment clob NOT NULL
+ regist_bookmark_pk number PRIMARY KEY,
+ bookmarkcomment clob NOT NULL
 );
 
 //복합키
